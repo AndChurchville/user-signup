@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        
+        <h1>Signup</h1>
+            <table>
+                <tr>
+                    <td>
+                        <form action="/signup" method="POST">
+                        <label for="username">Username
+                        <input id="username" type="text" name="username" value='{{username}}' > 
+                        <p class="error">{{username_error}}</p></label> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password
+                        <input id="password" type="password" name="password" value='{{password}}'>
+                        <p class="error">{{password_error}}</p></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password2">Verify Password
+                        <input id="password2" type="password" name="password2" value='{{password2}}'>
+                        <p class="error">{{password2_error}}</p></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email (optional)
+                        <input id="email" type="text" name="email" value='{{email}}'>
+                        <p class="error">{{email_error}}</p></label>
+                    </td>
+                </tr>
+            </table>
+            
+            <input type = "submit" value="Submit">
+        </form>
+
+    </body>
+</html>
